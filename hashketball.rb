@@ -222,11 +222,6 @@ def big_shoe_rebounds
 end
 
 
-def most_points_scored
-
-end
-
-
 def iterate_through_players_for(name, statistic)
   game_hash.each do |_team, game_data|
     game_data[:players].each do |player|
@@ -274,9 +269,14 @@ def winning_team
       scores[game_data[:team_name]] += iterate_through_players_for(player[:player_name], :points)
     end
   end
-
   scores.max_by { |_k, v| v }.first
 end
+
+
+def player_with_longest_name
+  player_with_most_of(:player_name)
+end
+
 
 def long_name_steals_a_ton?
   player_with_most_of(:steals) == player_with_most_of(:player_name)
