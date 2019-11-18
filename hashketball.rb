@@ -227,6 +227,14 @@ def most_points_scored
 end
 
 
+def iterate_through_players_for(name, statistic)
+  game_hash.each do |_team, game_data|
+    game_data[:players].each do |player|
+      return player[statistic] if player[:player_name] == name
+    end
+  end
+end
+
 def long_name_steals_a_ton?
   player_with_most_of(:steals) == player_with_most_of(:player_name)
 end
