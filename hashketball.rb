@@ -118,6 +118,7 @@ def game_hash
 }
 end
 
+
 def num_points_scored(players_name)
 
   game_hash.each do |place, team|
@@ -134,6 +135,7 @@ def num_points_scored(players_name)
   end
 end
 
+
 def shoe_size(players_name)
   game_hash.each do |place, team|
     team.each do |attribute, data|
@@ -149,6 +151,7 @@ def shoe_size(players_name)
   end
 end
 
+
 def team_colors(team_name)
   game_hash.each do |place, team|
     if team[:team_name] == team_name
@@ -156,6 +159,7 @@ def team_colors(team_name)
     end
   end
 end
+
 
 def team_names
   game_hash.map do |place, team|
@@ -170,6 +174,7 @@ end
 #  end
 #  new_array
 #end
+
 
 def player_numbers(team_name)
   numbers = []
@@ -229,6 +234,7 @@ def iterate_through_players_for(name, statistic)
     end
   end
 end
+
 
 def player_with_most_of(statistic)
   player_name = nil
